@@ -10,6 +10,5 @@ RUN apt-get install -y wget \
 WORKDIR /app
 COPY package*.json .
 RUN npm install
-COPY . .
-ENV 
+COPY . . 
 CMD xvfb-run --server-args="-screen 0 1024x768x24" npm run dev
